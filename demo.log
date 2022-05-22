@@ -3964,3 +3964,828 @@ Caused by: java.net.BindException: アドレスは既に使用中です
 	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1072) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
 	... 20 common frames omitted
 
+2022-05-22 23:13:50.470  INFO 84329 --- [main] c.m.s.SpringBootRestApplication          : Starting SpringBootRestApplication using Java 17.0.3 on debian with PID 84329 (/home/kuhataku/ドキュメント/spring_boot_rest/build/classes/java/main started by kuhataku in /home/kuhataku/ドキュメント/spring_boot_rest)
+2022-05-22 23:13:50.475 DEBUG 84329 --- [main] c.m.s.SpringBootRestApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-05-22 23:13:50.476  INFO 84329 --- [main] c.m.s.SpringBootRestApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-05-22 23:13:52.928  INFO 84329 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-22 23:13:53.165  INFO 84329 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 222 ms. Found 2 JPA repository interfaces.
+2022-05-22 23:13:55.545  INFO 84329 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2022-05-22 23:13:55.567  INFO 84329 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-22 23:13:55.568  INFO 84329 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-05-22 23:13:55.927  INFO 84329 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/app]    : Initializing Spring embedded WebApplicationContext
+2022-05-22 23:13:55.927  INFO 84329 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5240 ms
+2022-05-22 23:13:56.071  INFO 84329 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-22 23:13:56.575  INFO 84329 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-22 23:13:56.590  INFO 84329 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./em_db'
+2022-05-22 23:13:56.989  INFO 84329 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-22 23:13:57.053  INFO 84329 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-05-22 23:13:57.216  INFO 84329 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-22 23:13:57.352  INFO 84329 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-22 23:13:57.747  WARN 84329 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    drop table if exists user CASCADE " via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    drop table if exists user CASCADE " via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:246) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.mysv986.spring_boot_rest.SpringBootRestApplication.main(SpringBootRestApplication.java:10) ~[main/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "\000a    drop table if exists [*]user CASCADE "; 期待されるステートメント "identifier"
+Syntax error in SQL statement "\000a    drop table if exists [*]user CASCADE "; expected "identifier"; SQL statement:
+
+    drop table if exists user CASCADE  [42001-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5724) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifierWithSchema(Parser.java:5684) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifierWithSchema(Parser.java:5713) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseDrop(Parser.java:2211) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parsePrepared(Parser.java:776) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:691) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.prepareCommand(Parser.java:568) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.212.jar:2.1.212]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 34 common frames omitted
+
+2022-05-22 23:13:57.773  WARN 84329 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table user (
+       id bigint generated by default as identity,
+        account varchar(128) not null,
+        admin boolean,
+        email varchar(255) not null,
+        password varchar(255) not null,
+        primary key (id)
+    )" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table user (
+       id bigint generated by default as identity,
+        account varchar(128) not null,
+        admin boolean,
+        email varchar(255) not null,
+        password varchar(255) not null,
+        primary key (id)
+    )" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:458) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:442) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:325) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:169) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:138) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:124) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:168) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.mysv986.spring_boot_rest.SpringBootRestApplication.main(SpringBootRestApplication.java:10) ~[main/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "\000a    create table [*]user (\000a       id bigint generated by default as identity,\000a        account varchar(128) not null,\000a        admin boolean,\000a        email varchar(255) not null,\000a        password varchar(255) not null,\000a        primary key (id)\000a    )"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "\000a    create table [*]user (\000a       id bigint generated by default as identity,\000a        account varchar(128) not null,\000a        admin boolean,\000a        email varchar(255) not null,\000a        password varchar(255) not null,\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table user (
+       id bigint generated by default as identity,
+        account varchar(128) not null,
+        admin boolean,
+        email varchar(255) not null,
+        password varchar(255) not null,
+        primary key (id)
+    ) [42001-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5724) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifierWithSchema(Parser.java:5684) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifierWithSchema(Parser.java:5713) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9248) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseCreate(Parser.java:6745) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parsePrepared(Parser.java:763) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:691) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.prepareCommand(Parser.java:568) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.212.jar:2.1.212]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 34 common frames omitted
+
+2022-05-22 23:13:57.783  WARN 84329 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table user 
+       add constraint UK_ob8kqyqqgmefl0aco34akdtpe unique (email)" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table user 
+       add constraint UK_ob8kqyqqgmefl0aco34akdtpe unique (email)" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:458) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:442) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:361) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:169) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:138) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:124) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:168) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.mysv986.spring_boot_rest.SpringBootRestApplication.main(SpringBootRestApplication.java:10) ~[main/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "\000a    alter table [*]user \000a       add constraint UK_ob8kqyqqgmefl0aco34akdtpe unique (email)"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "\000a    alter table [*]user \000a       add constraint UK_ob8kqyqqgmefl0aco34akdtpe unique (email)"; expected "identifier"; SQL statement:
+
+    alter table user 
+       add constraint UK_ob8kqyqqgmefl0aco34akdtpe unique (email) [42001-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5724) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifierWithSchema(Parser.java:5684) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifierWithSchema(Parser.java:5713) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseAlterTable(Parser.java:8454) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseAlter(Parser.java:7522) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parsePrepared(Parser.java:747) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:691) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.prepareCommand(Parser.java:568) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.212.jar:2.1.212]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 34 common frames omitted
+
+2022-05-22 23:13:57.786  INFO 84329 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'file:/home/kuhataku/%e3%83%89%e3%82%ad%e3%83%a5%e3%83%a1%e3%83%b3%e3%83%88/spring_boot_rest/build/resources/main/import.sql'
+2022-05-22 23:13:57.788  WARN 84329 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "INSERT INTO `user` (id, account, email, admin, password) VALUES (1, 'admin', 'admin@example.com', TRUE, '{bcrypt}$2a$10$u1heCOmGzy3zuRJb253sb.9I.4bbE0ZeGS2xUbayV1eXgbZDr.4ui')" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "INSERT INTO `user` (id, account, email, admin, password) VALUES (1, 'admin', 'admin@example.com', TRUE, '{bcrypt}$2a$10$u1heCOmGzy3zuRJb253sb.9I.4bbE0ZeGS2xUbayV1eXgbZDr.4ui')" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:458) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applyImportSources(SchemaCreatorImpl.java:514) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:183) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:138) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:124) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:168) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.mysv986.spring_boot_rest.SpringBootRestApplication.main(SpringBootRestApplication.java:10) ~[main/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "USER" が見つかりません
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, account, email, admin, password) VALUES (1, 'admin', 'admin@example.com', TRUE, '{bcrypt}$2a$10$u1heCOmGzy3zuRJb253sb.9I.4bbE0ZeGS2xUbayV1eXgbZDr.4ui') [42102-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8376) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8347) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8336) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8306) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseInsert(Parser.java:1641) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parsePrepared(Parser.java:814) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:691) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.prepareCommand(Parser.java:568) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.212.jar:2.1.212]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 33 common frames omitted
+
+2022-05-22 23:13:57.789  WARN 84329 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "INSERT INTO `user` (id, account, email, admin, password) VALUES (2, 'test', 'test@example.com', FALSE, '{bcrypt}$2a$10$yhKS51Zk5PPSFh4aFnCps.tlxHXonHjs8DBIpa5PG9Setq33z2qcy')" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "INSERT INTO `user` (id, account, email, admin, password) VALUES (2, 'test', 'test@example.com', FALSE, '{bcrypt}$2a$10$yhKS51Zk5PPSFh4aFnCps.tlxHXonHjs8DBIpa5PG9Setq33z2qcy')" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:458) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applyImportSources(SchemaCreatorImpl.java:514) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:183) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:138) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:124) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:168) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.mysv986.spring_boot_rest.SpringBootRestApplication.main(SpringBootRestApplication.java:10) ~[main/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "USER" が見つかりません
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, account, email, admin, password) VALUES (2, 'test', 'test@example.com', FALSE, '{bcrypt}$2a$10$yhKS51Zk5PPSFh4aFnCps.tlxHXonHjs8DBIpa5PG9Setq33z2qcy') [42102-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8376) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8347) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8336) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8306) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseInsert(Parser.java:1641) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parsePrepared(Parser.java:814) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:691) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.prepareCommand(Parser.java:568) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.212.jar:2.1.212]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 33 common frames omitted
+
+2022-05-22 23:13:57.792  INFO 84329 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-22 23:13:57.846  INFO 84329 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-22 23:13:59.249 DEBUG 84329 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for ExactUrl [processUrl='/login']
+2022-05-22 23:13:59.261 DEBUG 84329 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for ExactUrl [processUrl='/login']
+2022-05-22 23:13:59.262 DEBUG 84329 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Mvc [pattern='/hello/**']
+2022-05-22 23:13:59.262 DEBUG 84329 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', PUT]
+2022-05-22 23:13:59.263 DEBUG 84329 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', PATCH]
+2022-05-22 23:13:59.263 DEBUG 84329 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', DELETE]
+2022-05-22 23:13:59.263 DEBUG 84329 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user', POST]
+2022-05-22 23:13:59.264 DEBUG 84329 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/user/list', GET]
+2022-05-22 23:13:59.264 DEBUG 84329 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/user/**', GET]
+2022-05-22 23:13:59.264 DEBUG 84329 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/password', POST]
+2022-05-22 23:13:59.264 DEBUG 84329 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place/**', PUT]
+2022-05-22 23:13:59.265 DEBUG 84329 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place/**', DELETE]
+2022-05-22 23:13:59.266 DEBUG 84329 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place', POST]
+2022-05-22 23:13:59.268 DEBUG 84329 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/place/**', GET]
+2022-05-22 23:13:59.268 DEBUG 84329 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [authenticated] for any request
+2022-05-22 23:13:59.281  INFO 84329 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@48a21ea6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@394e504d, org.springframework.security.web.context.SecurityContextPersistenceFilter@76ee7301, org.springframework.security.web.header.HeaderWriterFilter@87f1201, org.springframework.web.filter.CorsFilter@62ff14cd, org.springframework.security.web.csrf.CsrfFilter@32e7df65, org.springframework.security.web.authentication.logout.LogoutFilter@4930213b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@166d576b, org.springframework.security.web.session.ConcurrentSessionFilter@29b0c169, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@68feca3a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d4bac56, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ae6a77b, org.springframework.security.web.session.SessionManagementFilter@77622c82, org.springframework.security.web.access.ExceptionTranslationFilter@539bb233, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3435a4e5]
+2022-05-22 23:13:59.458  WARN 84329 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+2022-05-22 23:13:59.462  INFO 84329 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-22 23:13:59.462  INFO 84329 --- [main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-05-22 23:13:59.464 ERROR 84329 --- [main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: 
+    drop table if exists user CASCADE 
+2022-05-22 23:13:59.466  INFO 84329 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-22 23:13:59.476  INFO 84329 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-22 23:13:59.477  INFO 84329 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-22 23:13:59.492  INFO 84329 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-22 23:13:59.516 ERROR 84329 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356) ~[spring-context-5.3.20.jar:5.3.20]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.mysv986.spring_boot_rest.SpringBootRestApplication.main(SpringBootRestApplication.java:10) ~[main/:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:229) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:43) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178) ~[spring-context-5.3.20.jar:5.3.20]
+	... 14 common frames omitted
+Caused by: java.lang.IllegalArgumentException: standardService.connector.startFailed
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:238) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:282) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:213) ~[spring-boot-2.7.0.jar:2.7.0]
+	... 16 common frames omitted
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1075) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:234) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	... 18 common frames omitted
+Caused by: java.net.BindException: アドレスは既に使用中です
+	at java.base/sun.nio.ch.Net.bind0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.bind(Net.java:555) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:274) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:229) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1227) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1313) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:614) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1072) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	... 20 common frames omitted
+
+2022-05-22 23:14:37.026  INFO 84969 --- [main] c.m.s.SpringBootRestApplication          : Starting SpringBootRestApplication using Java 17.0.3 on debian with PID 84969 (/home/kuhataku/ドキュメント/spring_boot_rest/build/classes/java/main started by kuhataku in /home/kuhataku/ドキュメント/spring_boot_rest)
+2022-05-22 23:14:37.029 DEBUG 84969 --- [main] c.m.s.SpringBootRestApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-05-22 23:14:37.029  INFO 84969 --- [main] c.m.s.SpringBootRestApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-05-22 23:14:37.643  INFO 84969 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-22 23:14:37.686  INFO 84969 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2022-05-22 23:14:38.160  INFO 84969 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2022-05-22 23:14:38.168  INFO 84969 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-22 23:14:38.168  INFO 84969 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-05-22 23:14:38.289  INFO 84969 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/app]    : Initializing Spring embedded WebApplicationContext
+2022-05-22 23:14:38.290  INFO 84969 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1212 ms
+2022-05-22 23:14:38.315  INFO 84969 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-22 23:14:38.539  INFO 84969 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-22 23:14:38.549  INFO 84969 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./em_db'
+2022-05-22 23:14:39.036  INFO 84969 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-22 23:14:39.061  INFO 84969 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-05-22 23:14:39.181  INFO 84969 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-22 23:14:39.301  INFO 84969 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-22 23:14:39.670  WARN 84969 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    drop table if exists user CASCADE " via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    drop table if exists user CASCADE " via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:246) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.mysv986.spring_boot_rest.SpringBootRestApplication.main(SpringBootRestApplication.java:10) ~[main/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "\000a    drop table if exists [*]user CASCADE "; 期待されるステートメント "identifier"
+Syntax error in SQL statement "\000a    drop table if exists [*]user CASCADE "; expected "identifier"; SQL statement:
+
+    drop table if exists user CASCADE  [42001-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5724) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifierWithSchema(Parser.java:5684) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifierWithSchema(Parser.java:5713) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseDrop(Parser.java:2211) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parsePrepared(Parser.java:776) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:691) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.prepareCommand(Parser.java:568) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.212.jar:2.1.212]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 34 common frames omitted
+
+2022-05-22 23:14:39.683  WARN 84969 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    create table user (
+       id bigint generated by default as identity,
+        account varchar(128) not null,
+        admin boolean,
+        email varchar(255) not null,
+        password varchar(255) not null,
+        primary key (id)
+    )" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    create table user (
+       id bigint generated by default as identity,
+        account varchar(128) not null,
+        admin boolean,
+        email varchar(255) not null,
+        password varchar(255) not null,
+        primary key (id)
+    )" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:458) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:442) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:325) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:169) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:138) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:124) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:168) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.mysv986.spring_boot_rest.SpringBootRestApplication.main(SpringBootRestApplication.java:10) ~[main/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "\000a    create table [*]user (\000a       id bigint generated by default as identity,\000a        account varchar(128) not null,\000a        admin boolean,\000a        email varchar(255) not null,\000a        password varchar(255) not null,\000a        primary key (id)\000a    )"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "\000a    create table [*]user (\000a       id bigint generated by default as identity,\000a        account varchar(128) not null,\000a        admin boolean,\000a        email varchar(255) not null,\000a        password varchar(255) not null,\000a        primary key (id)\000a    )"; expected "identifier"; SQL statement:
+
+    create table user (
+       id bigint generated by default as identity,
+        account varchar(128) not null,
+        admin boolean,
+        email varchar(255) not null,
+        password varchar(255) not null,
+        primary key (id)
+    ) [42001-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5724) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifierWithSchema(Parser.java:5684) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifierWithSchema(Parser.java:5713) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9248) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseCreate(Parser.java:6745) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parsePrepared(Parser.java:763) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:691) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.prepareCommand(Parser.java:568) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.212.jar:2.1.212]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 34 common frames omitted
+
+2022-05-22 23:14:39.689  WARN 84969 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+    alter table user 
+       add constraint UK_ob8kqyqqgmefl0aco34akdtpe unique (email)" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+    alter table user 
+       add constraint UK_ob8kqyqqgmefl0aco34akdtpe unique (email)" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:458) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlStrings(SchemaCreatorImpl.java:442) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.createFromMetadata(SchemaCreatorImpl.java:361) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:169) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:138) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:124) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:168) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.mysv986.spring_boot_rest.SpringBootRestApplication.main(SpringBootRestApplication.java:10) ~[main/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "\000a    alter table [*]user \000a       add constraint UK_ob8kqyqqgmefl0aco34akdtpe unique (email)"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "\000a    alter table [*]user \000a       add constraint UK_ob8kqyqqgmefl0aco34akdtpe unique (email)"; expected "identifier"; SQL statement:
+
+    alter table user 
+       add constraint UK_ob8kqyqqgmefl0aco34akdtpe unique (email) [42001-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifier(Parser.java:5724) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifierWithSchema(Parser.java:5684) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readIdentifierWithSchema(Parser.java:5713) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseAlterTable(Parser.java:8454) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseAlter(Parser.java:7522) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parsePrepared(Parser.java:747) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:691) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.prepareCommand(Parser.java:568) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.212.jar:2.1.212]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 34 common frames omitted
+
+2022-05-22 23:14:39.691  INFO 84969 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'file:/home/kuhataku/%e3%83%89%e3%82%ad%e3%83%a5%e3%83%a1%e3%83%b3%e3%83%88/spring_boot_rest/build/resources/main/import.sql'
+2022-05-22 23:14:39.698  WARN 84969 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "INSERT INTO `user` (id, account, email, admin, password) VALUES (1, 'admin', 'admin@example.com', TRUE, '{bcrypt}$2a$10$u1heCOmGzy3zuRJb253sb.9I.4bbE0ZeGS2xUbayV1eXgbZDr.4ui')" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "INSERT INTO `user` (id, account, email, admin, password) VALUES (1, 'admin', 'admin@example.com', TRUE, '{bcrypt}$2a$10$u1heCOmGzy3zuRJb253sb.9I.4bbE0ZeGS2xUbayV1eXgbZDr.4ui')" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:458) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applyImportSources(SchemaCreatorImpl.java:514) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:183) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:138) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:124) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:168) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.mysv986.spring_boot_rest.SpringBootRestApplication.main(SpringBootRestApplication.java:10) ~[main/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "USER" が見つかりません
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, account, email, admin, password) VALUES (1, 'admin', 'admin@example.com', TRUE, '{bcrypt}$2a$10$u1heCOmGzy3zuRJb253sb.9I.4bbE0ZeGS2xUbayV1eXgbZDr.4ui') [42102-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8376) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8347) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8336) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8306) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseInsert(Parser.java:1641) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parsePrepared(Parser.java:814) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:691) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.prepareCommand(Parser.java:568) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.212.jar:2.1.212]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 33 common frames omitted
+
+2022-05-22 23:14:39.700  WARN 84969 --- [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "INSERT INTO `user` (id, account, email, admin, password) VALUES (2, 'test', 'test@example.com', FALSE, '{bcrypt}$2a$10$yhKS51Zk5PPSFh4aFnCps.tlxHXonHjs8DBIpa5PG9Setq33z2qcy')" via JDBC Statement
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "INSERT INTO `user` (id, account, email, admin, password) VALUES (2, 'test', 'test@example.com', FALSE, '{bcrypt}$2a$10$yhKS51Zk5PPSFh4aFnCps.tlxHXonHjs8DBIpa5PG9Setq33z2qcy')" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applySqlString(SchemaCreatorImpl.java:458) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.applyImportSources(SchemaCreatorImpl.java:514) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.performCreation(SchemaCreatorImpl.java:183) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:138) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.internal.SchemaCreatorImpl.doCreation(SchemaCreatorImpl.java:124) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:168) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.mysv986.spring_boot_rest.SpringBootRestApplication.main(SpringBootRestApplication.java:10) ~[main/:na]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: テーブル "USER" が見つかりません
+Table "USER" not found; SQL statement:
+INSERT INTO `user` (id, account, email, admin, password) VALUES (2, 'test', 'test@example.com', FALSE, '{bcrypt}$2a$10$yhKS51Zk5PPSFh4aFnCps.tlxHXonHjs8DBIpa5PG9Setq33z2qcy') [42102-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8376) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8347) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8336) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8306) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseInsert(Parser.java:1641) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parsePrepared(Parser.java:814) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:691) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.prepareCommand(Parser.java:568) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223) ~[h2-2.1.212.jar:2.1.212]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 33 common frames omitted
+
+2022-05-22 23:14:39.707  INFO 84969 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-22 23:14:39.730  INFO 84969 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-22 23:14:40.844 DEBUG 84969 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for ExactUrl [processUrl='/login']
+2022-05-22 23:14:40.853 DEBUG 84969 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for ExactUrl [processUrl='/login']
+2022-05-22 23:14:40.853 DEBUG 84969 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Mvc [pattern='/hello/**']
+2022-05-22 23:14:40.853 DEBUG 84969 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', PUT]
+2022-05-22 23:14:40.854 DEBUG 84969 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', PATCH]
+2022-05-22 23:14:40.855 DEBUG 84969 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', DELETE]
+2022-05-22 23:14:40.855 DEBUG 84969 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user', POST]
+2022-05-22 23:14:40.855 DEBUG 84969 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/user/list', GET]
+2022-05-22 23:14:40.856 DEBUG 84969 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/user/**', GET]
+2022-05-22 23:14:40.856 DEBUG 84969 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/password', POST]
+2022-05-22 23:14:40.856 DEBUG 84969 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place/**', PUT]
+2022-05-22 23:14:40.856 DEBUG 84969 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place/**', DELETE]
+2022-05-22 23:14:40.858 DEBUG 84969 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place', POST]
+2022-05-22 23:14:40.858 DEBUG 84969 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/place/**', GET]
+2022-05-22 23:14:40.858 DEBUG 84969 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [authenticated] for any request
+2022-05-22 23:14:40.863  INFO 84969 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@160cf225, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a262980, org.springframework.security.web.context.SecurityContextPersistenceFilter@703eead0, org.springframework.security.web.header.HeaderWriterFilter@22ea6051, org.springframework.web.filter.CorsFilter@10230657, org.springframework.security.web.csrf.CsrfFilter@219a2203, org.springframework.security.web.authentication.logout.LogoutFilter@430db481, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@64d42d3d, org.springframework.security.web.session.ConcurrentSessionFilter@14ee143a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f53b345, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fa689db, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@48a21ea6, org.springframework.security.web.session.SessionManagementFilter@21b2579d, org.springframework.security.web.access.ExceptionTranslationFilter@15bcecf9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f235a0a]
+2022-05-22 23:14:41.090  INFO 84969 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path '/app'
+2022-05-22 23:14:41.104  INFO 84969 --- [main] c.m.s.SpringBootRestApplication          : Started SpringBootRestApplication in 4.577 seconds (JVM running for 5.121)
