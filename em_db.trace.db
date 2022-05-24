@@ -848,3 +848,9 @@ INSERT INTO `user` (id, account, email, admin, password) VALUES (2, 'test', 'tes
 2022-05-24 22:57:38 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "user" not found (this database is empty); SQL statement:
 /* select generatedAlias0 from User as generatedAlias0 where generatedAlias0.account=:param0 */ select user0_.id as id1_1_, user0_.account as account2_1_, user0_.admin as admin3_1_, user0_.email as email4_1_, user0_.password as password5_1_ from "user" user0_ where user0_.account=? [42104-212]
+2022-05-24 23:11:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "user" not found (this database is empty); SQL statement:
+/* select generatedAlias0 from User as generatedAlias0 where generatedAlias0.account=:param0 */ select user0_.id as id1_1_, user0_.account as account2_1_, user0_.admin as admin3_1_, user0_.email as email4_1_, user0_.password as password5_1_ from "user" user0_ where user0_.account=? [42104-212]
+2022-05-24 23:14:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "user" not found (this database is empty); SQL statement:
+/* select generatedAlias0 from User as generatedAlias0 where generatedAlias0.account=:param0 */ select user0_.id as id1_1_, user0_.account as account2_1_, user0_.admin as admin3_1_, user0_.email as email4_1_, user0_.password as password5_1_ from "user" user0_ where user0_.account=? [42104-212]

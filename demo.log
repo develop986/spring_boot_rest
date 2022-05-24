@@ -408,3 +408,575 @@ Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "user" not found (this
 2022-05-24 23:08:44.421 DEBUG 9873 --- [http-nio-8000-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /user/list] with attributes [hasRole('ROLE_USER')]
 2022-05-24 23:08:44.421 DEBUG 9873 --- [http-nio-8000-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /user/list
 2022-05-24 23:08:44.510 DEBUG 9873 --- [http-nio-8000-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-05-24 23:10:34.249  INFO 9873 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-24 23:10:34.250  INFO 9873 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-05-24 23:10:34.440  INFO 9873 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-24 23:10:34.454  INFO 9873 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-24 23:10:38.306  INFO 11115 --- [main] c.m.s.SpringBootRestApplication          : Starting SpringBootRestApplication using Java 17.0.3 on debian with PID 11115 (/home/kuhataku/ドキュメント/spring_boot_rest/build/classes/java/main started by kuhataku in /home/kuhataku/ドキュメント/spring_boot_rest)
+2022-05-24 23:10:38.308 DEBUG 11115 --- [main] c.m.s.SpringBootRestApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-05-24 23:10:38.309  INFO 11115 --- [main] c.m.s.SpringBootRestApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-05-24 23:10:38.881  INFO 11115 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-24 23:10:38.919  INFO 11115 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2022-05-24 23:10:39.304  INFO 11115 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2022-05-24 23:10:39.311  INFO 11115 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-24 23:10:39.312  INFO 11115 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-05-24 23:10:39.413  INFO 11115 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/app]    : Initializing Spring embedded WebApplicationContext
+2022-05-24 23:10:39.414  INFO 11115 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1051 ms
+2022-05-24 23:10:39.438  INFO 11115 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-24 23:10:39.659  INFO 11115 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-24 23:10:39.673  INFO 11115 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./em_db'
+2022-05-24 23:10:39.942  INFO 11115 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-24 23:10:40.007  INFO 11115 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-05-24 23:10:40.135  INFO 11115 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-24 23:10:40.283  INFO 11115 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-24 23:10:40.610  INFO 11115 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-24 23:10:40.616  INFO 11115 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-24 23:10:41.157 DEBUG 11115 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for ExactUrl [processUrl='/login']
+2022-05-24 23:10:41.166 DEBUG 11115 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for ExactUrl [processUrl='/login']
+2022-05-24 23:10:41.167 DEBUG 11115 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Mvc [pattern='/hello/**']
+2022-05-24 23:10:41.167 DEBUG 11115 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', PUT]
+2022-05-24 23:10:41.168 DEBUG 11115 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', PATCH]
+2022-05-24 23:10:41.168 DEBUG 11115 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', DELETE]
+2022-05-24 23:10:41.168 DEBUG 11115 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user', POST]
+2022-05-24 23:10:41.169 DEBUG 11115 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/user/list', GET]
+2022-05-24 23:10:41.169 DEBUG 11115 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/user/**', GET]
+2022-05-24 23:10:41.169 DEBUG 11115 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/password', POST]
+2022-05-24 23:10:41.169 DEBUG 11115 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place/**', PUT]
+2022-05-24 23:10:41.169 DEBUG 11115 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place/**', DELETE]
+2022-05-24 23:10:41.170 DEBUG 11115 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place', POST]
+2022-05-24 23:10:41.170 DEBUG 11115 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/place/**', GET]
+2022-05-24 23:10:41.170 DEBUG 11115 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [authenticated] for any request
+2022-05-24 23:10:41.175  INFO 11115 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@77622c82, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44df834c, org.springframework.security.web.context.SecurityContextPersistenceFilter@30e15628, org.springframework.security.web.header.HeaderWriterFilter@1e033801, org.springframework.web.filter.CorsFilter@34c07ecc, org.springframework.security.web.csrf.CsrfFilter@5f81507a, org.springframework.security.web.authentication.logout.LogoutFilter@31f9f9b3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4f0cdd0f, org.springframework.security.web.session.ConcurrentSessionFilter@655f92a1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55d87b73, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@30ca66c5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7df23848, org.springframework.security.web.session.SessionManagementFilter@57ed8f95, org.springframework.security.web.access.ExceptionTranslationFilter@2fc40856, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@53f1fcc2]
+2022-05-24 23:10:41.409  INFO 11115 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path '/app'
+2022-05-24 23:10:41.426  INFO 11115 --- [main] c.m.s.SpringBootRestApplication          : Started SpringBootRestApplication in 3.508 seconds (JVM running for 3.901)
+2022-05-24 23:11:24.116  INFO 11115 --- [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-24 23:11:24.120  INFO 11115 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-24 23:11:24.121  INFO 11115 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-24 23:11:24.128 DEBUG 11115 --- [http-nio-8000-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /login
+2022-05-24 23:11:24.130 DEBUG 11115 --- [http-nio-8000-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-05-24 23:11:24.285  WARN 11115 --- [http-nio-8000-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 42104, SQLState: 42S04
+2022-05-24 23:11:24.285 ERROR 11115 --- [http-nio-8000-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table "user" not found (this database is empty); SQL statement:
+/* select generatedAlias0 from User as generatedAlias0 where generatedAlias0.account=:param0 */ select user0_.id as id1_1_, user0_.account as account2_1_, user0_.admin as admin3_1_, user0_.email as email4_1_, user0_.password as password5_1_ from "user" user0_ where user0_.account=? [42104-212]
+2022-05-24 23:11:24.287 DEBUG 11115 --- [http-nio-8000-exec-1] .s.a.DefaultAuthenticationEventPublisher : No event was found for the exception org.springframework.security.authentication.InternalAuthenticationServiceException
+2022-05-24 23:11:24.292 ERROR 11115 --- [http-nio-8000-exec-1] w.a.UsernamePasswordAuthenticationFilter : An internal error occurred while trying to authenticate the user.
+
+org.springframework.security.authentication.InternalAuthenticationServiceException: could not prepare statement; SQL [/* select generatedAlias0 from User as generatedAlias0 where generatedAlias0.account=:param0 */ select user0_.id as id1_1_, user0_.account as account2_1_, user0_.admin as admin3_1_, user0_.email as email4_1_, user0_.password as password5_1_ from "user" user0_ where user0_.account=?]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:133) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: could not prepare statement; SQL [/* select generatedAlias0 from User as generatedAlias0 where generatedAlias0.account=:param0 */ select user0_.id as id1_1_, user0_.account as account2_1_, user0_.admin as admin3_1_, user0_.email as email4_1_, user0_.password as password5_1_ from "user" user0_ where user0_.account=?]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:259) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145) ~[spring-data-jpa-2.7.0.jar:2.7.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.20.jar:5.3.20]
+	at jdk.proxy2/jdk.proxy2.$Proxy109.findByAccount(Unknown Source) ~[na:na]
+	at com.mysv986.spring_boot_rest.security.SimpleUserDetailsService.loadUserByUsername(SimpleUserDetailsService.java:24) ~[main/:na]
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93) ~[spring-security-core-5.7.1.jar:5.7.1]
+	... 63 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:186) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:151) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:2122) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2059) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2037) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.doQuery(Loader.java:956) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:357) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2868) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2850) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2682) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.list(Loader.java:2677) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:540) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1459) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1649) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1617) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1665) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getSingleResult(CriteriaQueryTypeQueryAdapter.java:111) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:406) ~[spring-orm-5.3.20.jar:5.3.20]
+	at jdk.proxy2/jdk.proxy2.$Proxy119.getSingleResult(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:198) ~[spring-data-jpa-2.7.0.jar:2.7.0]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:90) ~[spring-data-jpa-2.7.0.jar:2.7.0]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:156) ~[spring-data-jpa-2.7.0.jar:2.7.0]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:144) ~[spring-data-jpa-2.7.0.jar:2.7.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:159) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.20.jar:5.3.20]
+	... 72 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "user" not found (this database is empty); SQL statement:
+/* select generatedAlias0 from User as generatedAlias0 where generatedAlias0.account=:param0 */ select user0_.id as id1_1_, user0_.account as account2_1_, user0_.admin as admin3_1_, user0_.email as email4_1_, user0_.password as password5_1_ from "user" user0_ where user0_.account=? [42104-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8363) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8347) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8336) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1883) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readTableReference(Parser.java:2359) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2810) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseSelect(Parser.java:2917) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2800) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2667) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2646) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2639) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2632) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseQuery(Parser.java:2593) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:691) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.prepareCommand(Parser.java:568) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.212.jar:2.1.212]
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:337) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:149) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:176) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 112 common frames omitted
+
+2022-05-24 23:11:24.306 DEBUG 11115 --- [http-nio-8000-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store empty SecurityContext
+2022-05-24 23:11:24.308 DEBUG 11115 --- [http-nio-8000-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store empty SecurityContext
+2022-05-24 23:11:24.309 DEBUG 11115 --- [http-nio-8000-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-05-24 23:11:24.310 DEBUG 11115 --- [http-nio-8000-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2022-05-24 23:11:24.310 DEBUG 11115 --- [http-nio-8000-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-05-24 23:11:24.313 DEBUG 11115 --- [http-nio-8000-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-05-24 23:11:24.313 DEBUG 11115 --- [http-nio-8000-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 64E309B40856FBD1042B66214EC5D62C
+2022-05-24 23:11:24.330 DEBUG 11115 --- [http-nio-8000-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [POST /error] with attributes [authenticated]
+2022-05-24 23:11:24.333 DEBUG 11115 --- [http-nio-8000-exec-1] c.m.s.s.SimpleAuthenticationEntryPoint   : AuthenticationException : Full authentication is required to access this resource
+2022-05-24 23:11:24.336 DEBUG 11115 --- [http-nio-8000-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store empty SecurityContext
+2022-05-24 23:11:24.336 DEBUG 11115 --- [http-nio-8000-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store empty SecurityContext
+2022-05-24 23:11:24.337 DEBUG 11115 --- [http-nio-8000-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-05-24 23:12:21.158  INFO 11115 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-24 23:12:21.192  INFO 11115 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-24 23:12:21.197  INFO 11115 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-24 23:12:25.820  INFO 11982 --- [main] c.m.s.SpringBootRestApplication          : Starting SpringBootRestApplication using Java 17.0.3 on debian with PID 11982 (/home/kuhataku/ドキュメント/spring_boot_rest/build/classes/java/main started by kuhataku in /home/kuhataku/ドキュメント/spring_boot_rest)
+2022-05-24 23:12:25.822 DEBUG 11982 --- [main] c.m.s.SpringBootRestApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-05-24 23:12:25.823  INFO 11982 --- [main] c.m.s.SpringBootRestApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-05-24 23:12:26.426  INFO 11982 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-24 23:12:26.467  INFO 11982 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+2022-05-24 23:12:26.910  INFO 11982 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2022-05-24 23:12:26.934  INFO 11982 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-24 23:12:26.938  INFO 11982 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-05-24 23:12:27.245  INFO 11982 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/app]    : Initializing Spring embedded WebApplicationContext
+2022-05-24 23:12:27.246  INFO 11982 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1378 ms
+2022-05-24 23:12:27.330  INFO 11982 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-24 23:12:27.570  INFO 11982 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-24 23:12:27.581  INFO 11982 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./em_db'
+2022-05-24 23:12:27.926  INFO 11982 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-24 23:12:27.966  INFO 11982 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-05-24 23:12:28.160  INFO 11982 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-24 23:12:28.290  INFO 11982 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-24 23:12:28.667  INFO 11982 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'file:/home/kuhataku/%e3%83%89%e3%82%ad%e3%83%a5%e3%83%a1%e3%83%b3%e3%83%88/spring_boot_rest/build/resources/main/import.sql'
+2022-05-24 23:12:28.671  INFO 11982 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-24 23:12:28.675  INFO 11982 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-24 23:12:29.413 DEBUG 11982 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for ExactUrl [processUrl='/login']
+2022-05-24 23:12:29.421 DEBUG 11982 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for ExactUrl [processUrl='/login']
+2022-05-24 23:12:29.422 DEBUG 11982 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Mvc [pattern='/hello/**']
+2022-05-24 23:12:29.429 DEBUG 11982 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', PUT]
+2022-05-24 23:12:29.430 DEBUG 11982 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', PATCH]
+2022-05-24 23:12:29.434 DEBUG 11982 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', DELETE]
+2022-05-24 23:12:29.435 DEBUG 11982 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user', POST]
+2022-05-24 23:12:29.438 DEBUG 11982 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/user/list', GET]
+2022-05-24 23:12:29.438 DEBUG 11982 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/user/**', GET]
+2022-05-24 23:12:29.438 DEBUG 11982 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/password', POST]
+2022-05-24 23:12:29.438 DEBUG 11982 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place/**', PUT]
+2022-05-24 23:12:29.438 DEBUG 11982 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place/**', DELETE]
+2022-05-24 23:12:29.440 DEBUG 11982 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place', POST]
+2022-05-24 23:12:29.440 DEBUG 11982 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/place/**', GET]
+2022-05-24 23:12:29.441 DEBUG 11982 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [authenticated] for any request
+2022-05-24 23:12:29.466  INFO 11982 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1fcf73b9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b80bb63, org.springframework.security.web.context.SecurityContextPersistenceFilter@49770ef9, org.springframework.security.web.header.HeaderWriterFilter@5ec3689b, org.springframework.web.filter.CorsFilter@17ebbf1e, org.springframework.security.web.csrf.CsrfFilter@5570dc21, org.springframework.security.web.authentication.logout.LogoutFilter@73417494, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@63d75087, org.springframework.security.web.session.ConcurrentSessionFilter@443b6765, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f0cdd0f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@796613b7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c65fa69, org.springframework.security.web.session.SessionManagementFilter@219a2203, org.springframework.security.web.access.ExceptionTranslationFilter@4ef277ef, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@951e911]
+2022-05-24 23:12:29.718  INFO 11982 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path '/app'
+2022-05-24 23:12:29.730  INFO 11982 --- [main] c.m.s.SpringBootRestApplication          : Started SpringBootRestApplication in 4.388 seconds (JVM running for 4.837)
+2022-05-24 23:12:36.575  INFO 11982 --- [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-24 23:12:36.576  INFO 11982 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-24 23:12:36.576  INFO 11982 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-05-24 23:12:36.584 DEBUG 11982 --- [http-nio-8000-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /login
+2022-05-24 23:12:36.589 DEBUG 11982 --- [http-nio-8000-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-05-24 23:12:36.761 TRACE 11982 --- [http-nio-8000-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2022-05-24 23:12:36.875 DEBUG 11982 --- [http-nio-8000-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2022-05-24 23:12:36.890 DEBUG 11982 --- [http-nio-8000-exec-1] o.s.s.core.session.SessionRegistryImpl   : Registering session 12BA544251C6068A56700CA14398B8AE, for principal com.mysv986.spring_boot_rest.security.SimpleLoginUser [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, ROLE_USER]]
+2022-05-24 23:12:36.894 DEBUG 11982 --- [http-nio-8000-exec-1] o.s.s.w.csrf.CsrfAuthenticationStrategy  : Replaced CSRF Token
+2022-05-24 23:12:36.895 DEBUG 11982 --- [http-nio-8000-exec-1] w.a.UsernamePasswordAuthenticationFilter : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.mysv986.spring_boot_rest.security.SimpleLoginUser [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN, ROLE_USER]]
+2022-05-24 23:12:36.898  INFO 11982 --- [http-nio-8000-exec-1] m.s.s.SimpleAuthenticationSuccessHandler : X-My-CSRF-Header e924f63a-fd45-47e6-9584-f139bf7c6516
+2022-05-24 23:12:36.901 DEBUG 11982 --- [http-nio-8000-exec-1] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.mysv986.spring_boot_rest.security.SimpleLoginUser [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN, ROLE_USER]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@5526ff38]
+2022-05-24 23:12:36.901 DEBUG 11982 --- [http-nio-8000-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-05-24 23:12:39.318 DEBUG 11982 --- [http-nio-8000-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /user/list
+2022-05-24 23:12:39.319 DEBUG 11982 --- [http-nio-8000-exec-2] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.mysv986.spring_boot_rest.security.SimpleLoginUser [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN, ROLE_USER]]]
+2022-05-24 23:12:39.319 DEBUG 11982 --- [http-nio-8000-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.mysv986.spring_boot_rest.security.SimpleLoginUser [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN, ROLE_USER]]]
+2022-05-24 23:12:39.374 DEBUG 11982 --- [http-nio-8000-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /user/list] with attributes [hasRole('ROLE_USER')]
+2022-05-24 23:12:39.376 DEBUG 11982 --- [http-nio-8000-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /user/list
+2022-05-24 23:12:39.475 DEBUG 11982 --- [http-nio-8000-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-05-24 23:12:45.287  INFO 11982 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-24 23:12:45.290  INFO 11982 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-05-24 23:12:45.450  INFO 11982 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-24 23:12:45.459  INFO 11982 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-24 23:14:06.002  INFO 12613 --- [main] c.m.s.SpringBootRestApplication          : Starting SpringBootRestApplication using Java 17.0.3 on debian with PID 12613 (/home/kuhataku/ドキュメント/spring_boot_rest/build/classes/java/main started by kuhataku in /home/kuhataku/ドキュメント/spring_boot_rest)
+2022-05-24 23:14:06.005 DEBUG 12613 --- [main] c.m.s.SpringBootRestApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-05-24 23:14:06.006  INFO 12613 --- [main] c.m.s.SpringBootRestApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-05-24 23:14:06.579  INFO 12613 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-24 23:14:06.618  INFO 12613 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2022-05-24 23:14:07.305  INFO 12613 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2022-05-24 23:14:07.324  INFO 12613 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-24 23:14:07.324  INFO 12613 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-05-24 23:14:07.488  INFO 12613 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/app]    : Initializing Spring embedded WebApplicationContext
+2022-05-24 23:14:07.489  INFO 12613 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1437 ms
+2022-05-24 23:14:07.514  INFO 12613 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-24 23:14:07.707  INFO 12613 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-24 23:14:07.716  INFO 12613 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./em_db'
+2022-05-24 23:14:08.011  INFO 12613 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-24 23:14:08.036  INFO 12613 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-05-24 23:14:08.210  INFO 12613 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-24 23:14:08.366  INFO 12613 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-24 23:14:08.721  INFO 12613 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-24 23:14:08.735  INFO 12613 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-24 23:14:09.466 DEBUG 12613 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for ExactUrl [processUrl='/login']
+2022-05-24 23:14:09.476 DEBUG 12613 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for ExactUrl [processUrl='/login']
+2022-05-24 23:14:09.477 DEBUG 12613 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Mvc [pattern='/hello/**']
+2022-05-24 23:14:09.477 DEBUG 12613 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', PUT]
+2022-05-24 23:14:09.478 DEBUG 12613 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', PATCH]
+2022-05-24 23:14:09.478 DEBUG 12613 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', DELETE]
+2022-05-24 23:14:09.478 DEBUG 12613 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user', POST]
+2022-05-24 23:14:09.479 DEBUG 12613 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/user/list', GET]
+2022-05-24 23:14:09.479 DEBUG 12613 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/user/**', GET]
+2022-05-24 23:14:09.479 DEBUG 12613 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/password', POST]
+2022-05-24 23:14:09.479 DEBUG 12613 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place/**', PUT]
+2022-05-24 23:14:09.479 DEBUG 12613 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place/**', DELETE]
+2022-05-24 23:14:09.480 DEBUG 12613 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place', POST]
+2022-05-24 23:14:09.480 DEBUG 12613 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/place/**', GET]
+2022-05-24 23:14:09.480 DEBUG 12613 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [authenticated] for any request
+2022-05-24 23:14:09.485  INFO 12613 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8dc3019, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@34ab398b, org.springframework.security.web.context.SecurityContextPersistenceFilter@18301763, org.springframework.security.web.header.HeaderWriterFilter@2b4ba2d9, org.springframework.web.filter.CorsFilter@71634e64, org.springframework.security.web.csrf.CsrfFilter@4abfa2ff, org.springframework.security.web.authentication.logout.LogoutFilter@445f6f73, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2ad6aeb8, org.springframework.security.web.session.ConcurrentSessionFilter@2202c92f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e00d737, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@448fa659, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65cc3902, org.springframework.security.web.session.SessionManagementFilter@4eab9aec, org.springframework.security.web.access.ExceptionTranslationFilter@533e8807, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25e24908]
+2022-05-24 23:14:09.736  INFO 12613 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path '/app'
+2022-05-24 23:14:09.752  INFO 12613 --- [main] c.m.s.SpringBootRestApplication          : Started SpringBootRestApplication in 4.134 seconds (JVM running for 4.559)
+2022-05-24 23:14:18.900  INFO 12613 --- [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-24 23:14:18.901  INFO 12613 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-24 23:14:18.905  INFO 12613 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-24 23:14:18.911 DEBUG 12613 --- [http-nio-8000-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /login
+2022-05-24 23:14:18.914 DEBUG 12613 --- [http-nio-8000-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-05-24 23:14:19.077  WARN 12613 --- [http-nio-8000-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 42104, SQLState: 42S04
+2022-05-24 23:14:19.077 ERROR 12613 --- [http-nio-8000-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table "user" not found (this database is empty); SQL statement:
+/* select generatedAlias0 from User as generatedAlias0 where generatedAlias0.account=:param0 */ select user0_.id as id1_1_, user0_.account as account2_1_, user0_.admin as admin3_1_, user0_.email as email4_1_, user0_.password as password5_1_ from "user" user0_ where user0_.account=? [42104-212]
+2022-05-24 23:14:19.079 DEBUG 12613 --- [http-nio-8000-exec-1] .s.a.DefaultAuthenticationEventPublisher : No event was found for the exception org.springframework.security.authentication.InternalAuthenticationServiceException
+2022-05-24 23:14:19.084 ERROR 12613 --- [http-nio-8000-exec-1] w.a.UsernamePasswordAuthenticationFilter : An internal error occurred while trying to authenticate the user.
+
+org.springframework.security.authentication.InternalAuthenticationServiceException: could not prepare statement; SQL [/* select generatedAlias0 from User as generatedAlias0 where generatedAlias0.account=:param0 */ select user0_.id as id1_1_, user0_.account as account2_1_, user0_.admin as admin3_1_, user0_.email as email4_1_, user0_.password as password5_1_ from "user" user0_ where user0_.account=?]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:133) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201) ~[spring-security-core-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.7.1.jar:5.7.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.20.jar:5.3.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.63.jar:9.0.63]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: could not prepare statement; SQL [/* select generatedAlias0 from User as generatedAlias0 where generatedAlias0.account=:param0 */ select user0_.id as id1_1_, user0_.account as account2_1_, user0_.admin as admin3_1_, user0_.email as email4_1_, user0_.password as password5_1_ from "user" user0_ where user0_.account=?]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:259) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:233) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:551) ~[spring-orm-5.3.20.jar:5.3.20]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:145) ~[spring-data-jpa-2.7.0.jar:2.7.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.20.jar:5.3.20]
+	at jdk.proxy2/jdk.proxy2.$Proxy110.findByAccount(Unknown Source) ~[na:na]
+	at com.mysv986.spring_boot_rest.security.SimpleUserDetailsService.loadUserByUsername(SimpleUserDetailsService.java:24) ~[main/:na]
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93) ~[spring-security-core-5.7.1.jar:5.7.1]
+	... 63 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:186) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:151) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.prepareQueryStatement(Loader.java:2122) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2059) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2037) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.doQuery(Loader.java:956) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:357) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2868) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.doList(Loader.java:2850) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2682) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.Loader.list(Loader.java:2677) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:540) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1459) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1649) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1617) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1665) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.query.criteria.internal.compile.CriteriaQueryTypeQueryAdapter.getSingleResult(CriteriaQueryTypeQueryAdapter.java:111) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:406) ~[spring-orm-5.3.20.jar:5.3.20]
+	at jdk.proxy2/jdk.proxy2.$Proxy120.getSingleResult(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:198) ~[spring-data-jpa-2.7.0.jar:2.7.0]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:90) ~[spring-data-jpa-2.7.0.jar:2.7.0]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:156) ~[spring-data-jpa-2.7.0.jar:2.7.0]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:144) ~[spring-data-jpa-2.7.0.jar:2.7.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:159) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80) ~[spring-data-commons-2.7.0.jar:2.7.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.20.jar:5.3.20]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.20.jar:5.3.20]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.20.jar:5.3.20]
+	... 72 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "user" not found (this database is empty); SQL statement:
+/* select generatedAlias0 from User as generatedAlias0 where generatedAlias0.account=:param0 */ select user0_.id as id1_1_, user0_.account as account2_1_, user0_.admin as admin3_1_, user0_.email as email4_1_, user0_.password as password5_1_ from "user" user0_ where user0_.account=? [42104-212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8363) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:8347) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readTableOrView(Parser.java:8336) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readTablePrimary(Parser.java:1883) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.readTableReference(Parser.java:2359) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseSelectFromPart(Parser.java:2810) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseSelect(Parser.java:2917) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2800) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2667) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2646) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2639) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2632) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parseQuery(Parser.java:2593) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parsePrepared(Parser.java:724) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:691) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.parse(Parser.java:661) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.command.Parser.prepareCommand(Parser.java:568) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:631) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:554) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:92) ~[h2-2.1.212.jar:2.1.212]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288) ~[h2-2.1.212.jar:2.1.212]
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:337) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java) ~[HikariCP-4.0.3.jar:na]
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$5.doPrepare(StatementPreparerImpl.java:149) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:176) ~[hibernate-core-5.6.9.Final.jar:5.6.9.Final]
+	... 112 common frames omitted
+
+2022-05-24 23:14:19.090 DEBUG 12613 --- [http-nio-8000-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store empty SecurityContext
+2022-05-24 23:14:19.090 DEBUG 12613 --- [http-nio-8000-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store empty SecurityContext
+2022-05-24 23:14:19.091 DEBUG 12613 --- [http-nio-8000-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-05-24 23:14:19.092 DEBUG 12613 --- [http-nio-8000-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /error
+2022-05-24 23:14:19.092 DEBUG 12613 --- [http-nio-8000-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-05-24 23:14:19.093 DEBUG 12613 --- [http-nio-8000-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2022-05-24 23:14:19.093 DEBUG 12613 --- [http-nio-8000-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 12BA544251C6068A56700CA14398B8AE
+2022-05-24 23:14:19.107 DEBUG 12613 --- [http-nio-8000-exec-1] o.s.s.w.a.i.FilterSecurityInterceptor    : Failed to authorize filter invocation [POST /error] with attributes [authenticated]
+2022-05-24 23:14:19.108 DEBUG 12613 --- [http-nio-8000-exec-1] c.m.s.s.SimpleAuthenticationEntryPoint   : AuthenticationException : Full authentication is required to access this resource
+2022-05-24 23:14:19.110 DEBUG 12613 --- [http-nio-8000-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store empty SecurityContext
+2022-05-24 23:14:19.111 DEBUG 12613 --- [http-nio-8000-exec-1] w.c.HttpSessionSecurityContextRepository : Did not store empty SecurityContext
+2022-05-24 23:14:19.111 DEBUG 12613 --- [http-nio-8000-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-05-24 23:24:54.645  INFO 12613 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-24 23:24:54.653  INFO 12613 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-24 23:24:54.656  INFO 12613 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-24 23:24:59.649  INFO 16993 --- [main] c.m.s.SpringBootRestApplication          : Starting SpringBootRestApplication using Java 17.0.3 on debian with PID 16993 (/home/kuhataku/ドキュメント/spring_boot_rest/build/classes/java/main started by kuhataku in /home/kuhataku/ドキュメント/spring_boot_rest)
+2022-05-24 23:24:59.650 DEBUG 16993 --- [main] c.m.s.SpringBootRestApplication          : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-05-24 23:24:59.651  INFO 16993 --- [main] c.m.s.SpringBootRestApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-05-24 23:25:00.260  INFO 16993 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-24 23:25:00.304  INFO 16993 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 2 JPA repository interfaces.
+2022-05-24 23:25:00.821  INFO 16993 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2022-05-24 23:25:00.837  INFO 16993 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-24 23:25:00.841  INFO 16993 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-05-24 23:25:01.009  INFO 16993 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/app]    : Initializing Spring embedded WebApplicationContext
+2022-05-24 23:25:01.009  INFO 16993 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1300 ms
+2022-05-24 23:25:01.035  INFO 16993 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-24 23:25:01.244  INFO 16993 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-24 23:25:01.254  INFO 16993 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./em_db'
+2022-05-24 23:25:01.544  INFO 16993 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-24 23:25:01.569  INFO 16993 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-05-24 23:25:01.691  INFO 16993 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-24 23:25:01.836  INFO 16993 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-24 23:25:02.450  INFO 16993 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'file:/home/kuhataku/%e3%83%89%e3%82%ad%e3%83%a5%e3%83%a1%e3%83%b3%e3%83%88/spring_boot_rest/build/resources/main/import.sql'
+2022-05-24 23:25:02.454  INFO 16993 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-24 23:25:02.461  INFO 16993 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-24 23:25:03.146 DEBUG 16993 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for ExactUrl [processUrl='/login']
+2022-05-24 23:25:03.154 DEBUG 16993 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for ExactUrl [processUrl='/login']
+2022-05-24 23:25:03.155 DEBUG 16993 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [permitAll] for Mvc [pattern='/hello/**']
+2022-05-24 23:25:03.155 DEBUG 16993 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', PUT]
+2022-05-24 23:25:03.156 DEBUG 16993 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', PATCH]
+2022-05-24 23:25:03.156 DEBUG 16993 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user/**', DELETE]
+2022-05-24 23:25:03.157 DEBUG 16993 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/user', POST]
+2022-05-24 23:25:03.157 DEBUG 16993 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/user/list', GET]
+2022-05-24 23:25:03.157 DEBUG 16993 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/user/**', GET]
+2022-05-24 23:25:03.157 DEBUG 16993 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/password', POST]
+2022-05-24 23:25:03.157 DEBUG 16993 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place/**', PUT]
+2022-05-24 23:25:03.158 DEBUG 16993 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place/**', DELETE]
+2022-05-24 23:25:03.158 DEBUG 16993 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_ADMIN')] for Mvc [pattern='/place', POST]
+2022-05-24 23:25:03.158 DEBUG 16993 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [hasRole('ROLE_USER')] for Mvc [pattern='/place/**', GET]
+2022-05-24 23:25:03.158 DEBUG 16993 --- [main] edFilterInvocationSecurityMetadataSource : Adding web access control expression [authenticated] for any request
+2022-05-24 23:25:03.163  INFO 16993 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1fcf73b9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b80bb63, org.springframework.security.web.context.SecurityContextPersistenceFilter@49770ef9, org.springframework.security.web.header.HeaderWriterFilter@5ec3689b, org.springframework.web.filter.CorsFilter@17ebbf1e, org.springframework.security.web.csrf.CsrfFilter@5570dc21, org.springframework.security.web.authentication.logout.LogoutFilter@73417494, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@63d75087, org.springframework.security.web.session.ConcurrentSessionFilter@443b6765, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f0cdd0f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@796613b7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c65fa69, org.springframework.security.web.session.SessionManagementFilter@219a2203, org.springframework.security.web.access.ExceptionTranslationFilter@4ef277ef, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@951e911]
+2022-05-24 23:25:03.388  INFO 16993 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path '/app'
+2022-05-24 23:25:03.400  INFO 16993 --- [main] c.m.s.SpringBootRestApplication          : Started SpringBootRestApplication in 4.209 seconds (JVM running for 4.695)
+2022-05-24 23:25:15.668  INFO 16993 --- [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/app]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-24 23:25:15.674  INFO 16993 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-24 23:25:15.675  INFO 16993 --- [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-24 23:25:15.700 DEBUG 16993 --- [http-nio-8000-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /login
+2022-05-24 23:25:15.703 DEBUG 16993 --- [http-nio-8000-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2022-05-24 23:25:15.892 TRACE 16993 --- [http-nio-8000-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [admin]
+2022-05-24 23:25:15.983 DEBUG 16993 --- [http-nio-8000-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2022-05-24 23:25:15.991 DEBUG 16993 --- [http-nio-8000-exec-1] o.s.s.core.session.SessionRegistryImpl   : Registering session DF05561F10C6A27A6D0449D7EF0C86DB, for principal com.mysv986.spring_boot_rest.security.SimpleLoginUser [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, ROLE_USER]]
+2022-05-24 23:25:15.992 DEBUG 16993 --- [http-nio-8000-exec-1] o.s.s.w.csrf.CsrfAuthenticationStrategy  : Replaced CSRF Token
+2022-05-24 23:25:15.992 DEBUG 16993 --- [http-nio-8000-exec-1] w.a.UsernamePasswordAuthenticationFilter : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=com.mysv986.spring_boot_rest.security.SimpleLoginUser [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN, ROLE_USER]]
+2022-05-24 23:25:15.992  INFO 16993 --- [http-nio-8000-exec-1] m.s.s.SimpleAuthenticationSuccessHandler : X-My-CSRF-Header f1beec69-fa96-4668-b7d7-fe85785603a2
+2022-05-24 23:25:15.993 DEBUG 16993 --- [http-nio-8000-exec-1] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.mysv986.spring_boot_rest.security.SimpleLoginUser [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN, ROLE_USER]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@a7fad7d]
+2022-05-24 23:25:15.993 DEBUG 16993 --- [http-nio-8000-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2022-05-24 23:25:18.578 DEBUG 16993 --- [http-nio-8000-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /user/list
+2022-05-24 23:25:18.580 DEBUG 16993 --- [http-nio-8000-exec-2] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.mysv986.spring_boot_rest.security.SimpleLoginUser [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN, ROLE_USER]]]
+2022-05-24 23:25:18.580 DEBUG 16993 --- [http-nio-8000-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=com.mysv986.spring_boot_rest.security.SimpleLoginUser [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, credentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[ROLE_ADMIN, ROLE_USER]]]
+2022-05-24 23:25:18.693 DEBUG 16993 --- [http-nio-8000-exec-2] o.s.s.w.a.i.FilterSecurityInterceptor    : Authorized filter invocation [GET /user/list] with attributes [hasRole('ROLE_USER')]
+2022-05-24 23:25:18.694 DEBUG 16993 --- [http-nio-8000-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /user/list
+2022-05-24 23:25:18.859 DEBUG 16993 --- [http-nio-8000-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
