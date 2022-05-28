@@ -3,19 +3,13 @@
 > Spring Boot で作成した、簡易RESTシステムです
 > - ログイン認証
 > - CRUD
-> - パスワード暗号化保存
+> - パスワード暗号化
 
-| パッケージ名                   | バージョン |
-| ------------------------------ | ---------- |
-| OpenJDK                        | 17.0.3     |
-| Gradle                         | 7.4.2      |
-| Spring Boot                    | 2.7.0      |
-| Spring Security                | 5.7.1      |
-| Spring Data JPA                | 2.7.0      |
-| Spring Web                     |            |
-| Spring Configuration Processor |            |
-| H2 Database                    |            |
-| Lombok                         |            |
+| パッケージ名 | バージョン |
+| ------------ | ---------- |
+| OpenJDK      | 17.0.3     |
+| Gradle       | 7.4.2      |
+| Spring Boot  | 2.7.0      |
   
 ## 事前準備
 
@@ -38,6 +32,13 @@ http://localhost:3000/users/new
   - Package name: com.mysv986.spring_boot_rest
 - Jar
 - Java 17
+- Dependencies
+  - Spring Security
+  - Spring Data JPA
+  - Spring Web
+  - Spring Configuration Processor
+  - H2 Database
+  - Lombok
 
 ## 実行方法
 
@@ -74,10 +75,10 @@ http://localhost:8080/
 ### 動作環境構築
 
 ```
-# git clone https://github.com/develop986/node_express_mongo
+# git clone https://github.com/develop986/spring_boot_rest
 # git pull
-# cd node_express_mongo
-# npm install
+# cd spring_boot_rest
+$ java -jar build/libs/spring_boot_rest-0.0.1-SNAPSHOT.jar
 ```
 
 ## サービス作成
