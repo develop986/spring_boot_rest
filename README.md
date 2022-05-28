@@ -5,21 +5,18 @@
 > - CRUD
 > - パスワード暗号化保存
 
-| パッケージ名 | バージョン |
-| ------------- | ------------- |
-| connect-flash  | ^0.1.1  |
-| cookie-parser  | ^1.4.6  |
-| ejs  | ^3.1.8  |
-| express  | ^4.18.1  |
-| express-ejs-layouts  | ^2.5.1  |
-| express-session  | ^1.17.3  |
-| express-validator  | ^6.14.0  |
-| http-status-codes  | ^2.2.0  |
-| method-override  | ^3.0.0  |
-| mongoose  | ^6.3.3  |
-| passport  | ^0.5.2  |
-| passport-local-mongoose  | ^7.0.0  |
-
+| パッケージ名                   | バージョン |
+| ------------------------------ | ---------- |
+| OpenJDK                        | 17.0.3     |
+| Gradle                         | 7.4.2      |
+| Spring Boot                    | 2.7.0      |
+| Spring Security                | 5.7.1      |
+| Spring Data JPA                | 2.7.0      |
+| Spring Web                     |            |
+| Spring Configuration Processor |            |
+| H2 Database                    |            |
+| Lombok                         |            |
+  
 ## 事前準備
 
 - JavaとGragleをインストールしておくこと
@@ -53,14 +50,15 @@ http://localhost:8080/
 ## ビルド
 
 ```
-$ gradlew build
-$ java -jar build/libs/helloworld-0.0.1-SNAPSHOT.jar
+$ ./gradlew build
+$ java -jar build/libs/spring_boot_rest-0.0.1-SNAPSHOT.jar
 ```
+
+http://localhost:8080/
 
 ## 参考文献
 
-- Angular
-  - [入門Node.jsプログラミング](https://www.shoeisha.co.jp/book/detail/9784798158624)
+- [Spring Security with Spring Boot 2.0で簡単なRest APIを実装する](https://qiita.com/rubytomato@github/items/6c6318c948398fa62275)
 
 ## サーバー構築（CentOS Stream release 8）
 
@@ -69,7 +67,7 @@ $ java -jar build/libs/helloworld-0.0.1-SNAPSHOT.jar
 >   - 事前に以下で、Webサーバー環境を作っておく
 >     - `01_Indigo.md`
 >     - `02_Apache.md`
->     - `80_NodeJs.md`
+>     - `80_OpenJDK.md`
 
 > https://github.com/develop986/centos_server
 
