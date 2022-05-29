@@ -2,5 +2,5 @@
     "account": "test2",
     "password": "test2",
     "email": "test2@example.com",
-    "admin": false
+    "admin": true
 }
